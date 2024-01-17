@@ -92,7 +92,7 @@ godaddy_ip=$(retrieve_godaddy_ip)
 echo "$(date '+%Y-%m-%d %H:%M:%S') - Current External IP is $public_ip, GoDaddy DNS IP is $godaddy_ip"
 if [[ "$godaddy_ip" != "$public_ip" ]]; then
   echo "$(date '+%Y-%m-%d %H:%M:%S') - IP has changed!! Updating on GoDaddy"
-  update_godaddy_ip "$godaddy_ip"
+  update_godaddy_ip "$public_ip"
   echo "$(date '+%Y-%m-%d %H:%M:%S') - Update succeeded"
 fi
 
