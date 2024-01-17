@@ -22,7 +22,6 @@ RUN \
         openssl-dev \
         cargo \
     && pip3 install --no-cache-dir --find-links \
-        "https://wheels.home-assistant.io/alpine-$(cut -d '.' -f 1-2 < /etc/alpine-release)/${BUILD_ARCH}/" \ 
         cryptography==${CRYPTOGRAPHY_VERSION} \
         certbot==${CERTBOT_VERSION} \
         certbot-dns-godaddy=$(CERTBOT_DNS_GODADDY_VERSION) \
