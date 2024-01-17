@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/command/with-contenv bashio
+# shellcheck shell=bash
 
 # Parse config options
 
