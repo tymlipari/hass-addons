@@ -12,13 +12,13 @@ API_SECRET=$(bashio::config 'godaddy_api_secret')
 
 # Run forever (or until we get killed)
 while true; do
-  echo "Checking for DNS updates"
+  echo "$(date '+%Y-%m-%d %H:%M:%S') - Checking for DNS updates"
   ./update_godaddy_record.sh \
       --domain="$DOMAIN_NAME" \
       --record="$RECORD_NAME" \
       --api-key="$API_KEY" \
       --api-secret="$API_SECRET"
 
-  echo "Waiting 10 minutes until next check"
+  echo "$(date '+%Y-%m-%d %H:%M:%S') - Waiting 10 minutes until next check"
   sleep 10m
 done
