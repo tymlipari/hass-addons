@@ -1,0 +1,15 @@
+name: "Cloudflare Dynamic DNS"
+description: "Periodically updates Cloudflare DNS records from the local network via API"
+version: "0.1.0"
+slug: "cloudflare_dyndns"
+stage: experimental
+init: false
+arch: [ 'aarch64', 'amd64', 'armhf', 'armv7', 'i386' ]
+apparmor: true
+
+options:
+  domain_name: null
+  cloudflare_api_key: null
+schema:
+  domain_name: str
+  cloudflare_api_key: password
